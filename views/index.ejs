@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HEY</h1>
+    <h2>welcome to the site</h2>
+    <h3>the messaging site</h3>
+    <h4>make an account, login, post a message</h4>
+    <hr>
+        <a href="/createUser">Create an account</a> | 
+        <a href="/login">Login</a> | 
+        <a href="/message">post a message</a> | 
+    <hr>
+
+    <h2>Messages</h2>
+
+
+    <% for (let message of locals.messages) { %> 
+        <div id="like">
+            <button id="btn" onclick="vote()">
+                    <%= message.dataValues.content %>         
+                    
+            </button>
+        </div>
+    <% } %>
+    <p id="icon"> fr</p>
+</body>
+
+<script>
+
+    var i = 1
+    function vote(){
+    document.getElementById('icon').innerHTML= i.toString();
+     i++;
+     return counter;
+        
+    }
+   
+   
+
+</script>
+
+<style>
+  
+    .like{
+        background-color: rgba(134, 43, 226, 0.16);
+    }
+
+    span.icon {
+        display: none;
+        
+    }
+    button{
+        height: 30px;
+        width: fit-content;
+        border-style: none;
+        margin-top: 2%;
+        padding: 1.5%;
+    
+    }
+    button:hover {
+        outline-color: burlywood;
+        cursor: pointer;
+    }
+
+
+    #ic1 {
+        height: 15px;
+        width: 15px;
+    }
+</style>
+</html>
